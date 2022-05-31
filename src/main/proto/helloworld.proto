@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.langinteger.proto";
+
+package Demo;
+
+service HelloWorldService {
+  rpc helloWorld(Request) returns(Response) {}
+  rpc helloWorldBroken(Request) returns(Response) {}
+}
+
+message Request {
+  string name = 1;
+}
+
+message Response {
+  string greeting = 1;
+}
